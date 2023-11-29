@@ -1,0 +1,95 @@
+.background{
+    -fx-background-color:#2C74B3;
+}
+.background1{
+    -fx-background-color:#1a237e;
+}
+.backgroundNavbar{
+    -fx-background-color:#0A2647;
+}
+.background2{
+    -fx-background-color: #c3f2fc;
+    -fx-background-radius: 5;
+}
+.background3{
+    /*-fx-background-color:#FFF1DC;*/
+    /*-fx-background-color:#303f9f;*/
+    -fx-background-color: #485ed2;
+}
+.control-button{
+    /*-fx-background-color:#3A98B9;*/
+    -fx-background-color: #75bcf6;
+}
+.control-button1{
+    /*-fx-background-color:#6096B4;*/
+    -fx-background-color: #2a85ec;
+}
+.menu-button{
+    -fx-background-radius: 30;
+    -fx-background-color:#3A98B9;
+}
+.menu-button1{
+    -fx-background-radius: 60;
+    -fx-background-color:#3A98B9;
+}
+.image-view {
+    -fx-pref-width: 200px;
+    -fx-pref-height: 130px;
+}
+.search-box{
+    -fx-background-color:#FFFFFF;
+    -fx-background-radius: 100;
+}
+.shadow{
+    -fx-effect: dropShadow(three-pass-box,rgba(0,0,0,0.1), 10.0 , 0.0 , 0.0 ,10.0);
+    -fx-background-radius: 30;
+}
+.combo-box{
+    -fx-background-color: #55c2f8;
+}
+.table-view {
+    -fx-background-color: #3b50ce;
+    -fx-border-color: #1a237e;
+    -fx-background-radius: 10;
+    -fx-border-radius: 15;
+}
+.table-view .column-header {
+    -fx-background-color: #29b6f6;
+    -fx-border-color : #1a237e;
+    -fx-padding : 5px
+}
+.table-view *.scroll-bar:horizontal *.increment-button,
+.table-view *.scroll-bar:horizontal *.decrement-button {
+    -fx-background-color: null;
+    -fx-background-radius: 0;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+
+}
+
+.table-view *.scroll-bar:vertical *.increment-arrow,
+.table-view *.scroll-bar:vertical *.decrement-arrow {
+    -fx-background-color: null;
+    -fx-background-radius: 0;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+    -fx-shape: null;
+}
+
+.table-view .table-cell {
+    -fx-border-color : transparent;
+    -fx-padding : 5px ;
+}
+.table-row-cell:odd {
+    -fx-background-color: #afbfff;
+    -fx-text-background-color: #0A2647;
+}
+.table-row-cell:even{
+    -fx-background-color: #c3f2fc;
+    -fx-text-background-color: #0A2647;
+}
+.table-row-cell:filled:hover {
+    -fx-background-color: #1a237e;
+    -fx-background-radius: 15;
+    -fx-text-background-color: #EEEEEE;
+}

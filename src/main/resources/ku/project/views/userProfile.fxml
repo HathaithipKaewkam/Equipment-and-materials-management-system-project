@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ku.project.controllers.UserprofileController">
+    <children>
+        <BorderPane prefHeight="600.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <top>
+                <AnchorPane prefHeight="181.0" prefWidth="800.0" styleClass="backgroundNavbar" BorderPane.alignment="CENTER">
+                    <children>
+                        <ImageView fx:id="userPicture" fitHeight="122.0" fitWidth="160.0" layoutX="134.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../images/newuser.png" />
+                            </image></ImageView>
+                        <Label layoutX="329.0" layoutY="40.0" styleClass="background2" text="Username :">
+                            <font>
+                                <Font size="21.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="userName" layoutX="458.0" layoutY="48.0" styleClass="background2" text="Label" />
+                        <JFXButton layoutX="271.0" layoutY="141.0" onAction="#changePassButton" styleClass="control-button" text="Change password" textFill="#f80909" />
+                        <ButtonBar layoutX="-86.0" layoutY="14.0" prefHeight="40.0" prefWidth="200.0" />
+                        <Button layoutX="36.0" layoutY="38.0" mnemonicParsing="false" onAction="#backtoMain" styleClass="control-button" text="ย้อนกลับ">
+                            <graphic>
+                                <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../asset/icons/icon-go-back.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic></Button>
+                        <JFXButton layoutX="631.0" layoutY="25.0" onAction="#switchToLogout" prefHeight="44.0" prefWidth="138.0" styleClass="control-button" text="LOGOUT" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0">
+                            <graphic>
+                                <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../asset/icons/icon-logout.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </JFXButton>
+                        <Button layoutX="217.0" layoutY="105.0" mnemonicParsing="false" onAction="#changePicButton" styleClass="control-button">
+                            <graphic>
+                                <ImageView fitHeight="26.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../asset/icons/icon-addCamera.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                    </children>
+                </AnchorPane>
+            </top>
+            <center>
+                <TabPane prefHeight="200.0" prefWidth="200.0" styleClass="background1" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+                    <tabs>
+                        <Tab text="ประวัติการเบิกวัสดุ">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="background3">
+                                    <children>
+                                        <TableView fx:id="historyRequisitionTable" layoutX="66.0" layoutY="34.0" prefHeight="322.0" prefWidth="693.0" styleClass="control-button" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="60.0">
+                                            <columns>
+                                                <TableColumn prefWidth="118.59136199951172" text="หมายเลขครุภัณฑ์" />
+                                                <TableColumn prefWidth="129.51611328125" text="ชื่อครุภัณฑ์" />
+                                            </columns>
+                                        </TableView>
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </Tab>
+                        <Tab text="ประวัติการยืมครุภัณฑ์">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="background3">
+                                    <children>
+                                        <TableView fx:id="historyTable" layoutX="66.0" layoutY="34.0" prefHeight="322.0" prefWidth="693.0" styleClass="control-button" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="60.0">
+                                            <columns>
+                                                <TableColumn prefWidth="118.59136199951172" text="หมายเลขครุภัณฑ์" />
+                                                <TableColumn prefWidth="129.51611328125" text="ชื่อครุภัณฑ์" />
+                                            </columns>
+                                        </TableView>
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </Tab>
+                        <Tab text="สถานะการยืมครุภัณฑ์">
+                            <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="background3">
+                                    <children>
+                                        <TableView fx:id="borrowTable" layoutX="43.0" layoutY="31.0" prefHeight="322.0" prefWidth="720.0" styleClass="control-button" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="60.0">
+                                            <columns>
+                                                <TableColumn prefWidth="121.6814079284668" text="หมายเลขครุภัณฑ์" />
+                                                <TableColumn prefWidth="121.45849609375" text="ชื่อครุภัณฑ์" />
+                                                <TableColumn prefWidth="102.07583618164062" text="วันที่ยืม" />
+                                                <TableColumn prefWidth="132.71383666992188" text="เวลาที่ยืม" />
+                                                <TableColumn prefWidth="81.0" text="กดคืน" />
+                                                <TableColumn prefWidth="117.5" text="สถานะ" />
+                                            </columns>
+                                        </TableView>
+                                    </children>
+                                </AnchorPane>
+                            </content>
+                        </Tab>
+                    </tabs>
+                </TabPane>
+            </center>
+        </BorderPane>
+    </children>
+</AnchorPane>

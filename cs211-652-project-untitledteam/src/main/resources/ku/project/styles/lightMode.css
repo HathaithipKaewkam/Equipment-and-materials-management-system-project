@@ -1,0 +1,98 @@
+.background{
+    -fx-background-color:#FF9F9F;
+}
+.background1{
+    -fx-background-color: #F97AB6;
+}
+.backgroundNavbar{
+    -fx-background-color:#F13596;
+}
+.background2{
+    -fx-background-color: #ffd8ef;
+    -fx-background-radius: 10;
+}
+.background3{
+    -fx-background-color: #ffc0df;
+}
+.control-button{
+    /*-fx-background-color:#FCDDB0;*/
+    -fx-background-color:#f48fb1;
+
+}
+.control-button1{
+    /*-fx-background-color:#A7727D;*/
+    -fx-background-color:#f06292;
+}
+.menu-button{
+    -fx-background-radius: 30;
+    -fx-background-color:#FCDDB0;
+}
+.menu-button1{
+    -fx-background-radius: 30;
+    -fx-background-color:#ffca28;
+}
+.image-view {
+    -fx-pref-width: 200px;
+    -fx-pref-height: 130px;
+}
+.search-box{
+    -fx-background-color:#FFFFFF;
+    -fx-background-radius: 100;
+    -fx-border-color: #fff;
+}
+.shadow{
+    -fx-effect: dropShadow(three-pass-box,rgba(0,0,0,0.1), 10.0 , 0.0 , 0.0 ,10.0);
+}
+
+
+.combo-box{
+    -fx-background-color:#F9B5D0;
+}
+
+.table-view {
+    -fx-background-color: #F9B5D0;
+    -fx-border-color: #F13596;
+    -fx-background-radius: 10;
+    -fx-border-radius: 15;
+}
+.table-view .column-header {
+    -fx-background-color: #f48fb1;
+    -fx-border-color : #F13596;
+    -fx-padding : 5px
+}
+.table-view *.scroll-bar:horizontal *.increment-button,
+.table-view *.scroll-bar:horizontal *.decrement-button {
+    -fx-background-color: null;
+    -fx-background-radius: 0;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+
+}
+
+.table-view *.scroll-bar:vertical *.increment-arrow,
+.table-view *.scroll-bar:vertical *.decrement-arrow {
+    -fx-background-color: null;
+    -fx-background-radius: 0;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+    -fx-shape: null;
+}
+
+.table-view .table-cell {
+    -fx-border-color : transparent;
+    -fx-padding : 5px ;
+}
+.table-row-cell:odd {
+    -fx-background-color: #fccadc;
+    -fx-text-background-color: #F13596;
+}
+.table-row-cell:even{
+    -fx-background-color: #fdfdfd;
+    -fx-text-background-color: #F13596;
+}
+.table-row-cell:filled:hover {
+    -fx-background-color: #e16099;
+    -fx-background-radius: 15;
+    -fx-text-background-color: #EEEEEE;
+}
+

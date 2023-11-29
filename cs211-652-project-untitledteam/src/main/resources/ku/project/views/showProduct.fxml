@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="400.0" minWidth="600.0" prefHeight="600.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ku.project.controllers.HomeShowProductController">
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <AnchorPane prefHeight="65.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Pane layoutX="100.0" layoutY="-67.0" prefHeight="50.0" prefWidth="200.0" styleClass="backgroundNavbar" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <JFXButton layoutX="610.0" layoutY="3.0" onAction="#switchToProfile" prefHeight="44.0" prefWidth="138.0" styleClass="control-button" text="PROFILE">
+                           <graphic>
+                              <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../asset/icons/icon-user.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                        <JFXButton layoutX="754.0" layoutY="3.0" onAction="#switchToLogout" prefHeight="44.0" prefWidth="138.0" styleClass="control-button" text="LOGOUT">
+                           <graphic>
+                              <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../asset/icons/icon-logout.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                        <ImageView accessibleRole="BUTTON" fitHeight="54.0" fitWidth="129.0" layoutX="24.0" onMouseClicked="#refresh" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../images/UntitledTeam.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                     </children></Pane>
+                  <HBox layoutX="683.0" layoutY="26.0" AnchorPane.bottomAnchor="-1.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+                     <children>
+                        <HBox alignment="CENTER" maxHeight="-Infinity" prefHeight="35.0" prefWidth="200.0">
+                           <children>
+                              <TextField fx:id="searchTextField" prefHeight="33.0" prefWidth="218.0" promptText="Type here to search" styleClass="search-box">
+                                 <cursor>
+                                    <Cursor fx:constant="TEXT" />
+                                 </cursor>
+                              </TextField>
+                              <ImageView fx:id="searchImageView" fitHeight="20.0" fitWidth="20.0" onMouseClicked="#handleSearchIcon" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../asset/icons/icon-search.png" />
+                                 </image>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </ImageView>
+                           </children>
+                           <styleClass>
+                              <String fx:value="search-box" />
+                              <String fx:value="shadow" />
+                           </styleClass>
+                        </HBox>
+                        <HBox prefHeight="40.0" prefWidth="117.0" />
+                     </children>
+                  </HBox>
+                  <Label fx:id="catalog" layoutX="29.0" layoutY="32.0" text="หมวดหมู่" textFill="#b7b7b7" AnchorPane.topAnchor="50.0">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../asset/icons/icon-menubar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Label>
+                  <Label fx:id="catalogBack" layoutX="29.0" layoutY="32.0" text="หมวดหมู่" textFill="#b7b7b7" AnchorPane.topAnchor="50.0">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../asset/icons/icon-menubar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Label>
+                  <Label fx:id="header" layoutX="187.0" layoutY="55.0" text="ครุภัณฑ์ทั้งหมด" AnchorPane.topAnchor="55.0">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="sortComboBox" layoutX="317.0" layoutY="54.0" prefHeight="25.0" prefWidth="106.0" promptText="ล่าสุด" />
+               </children>
+            </AnchorPane>
+         </top>
+         <left>
+            <VBox BorderPane.alignment="CENTER">
+               <children>
+                  <VBox fx:id="slides" prefHeight="1000.0" prefWidth="170.0" styleClass="background3" VBox.vgrow="ALWAYS">
+                     <children>
+                        <Label prefHeight="22.0" prefWidth="62.0" styleClass="control-button" text="ครุภัณฑ์">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="58.0" />
+                           </VBox.margin>
+                        </Label>
+                        <JFXButton alignment="BASELINE_LEFT" onMouseClicked="#switchToRadio" prefHeight="38.0" prefWidth="200.0" styleClass="control-button" text="ไฟฟ้าและวิทยุ">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../asset/icons/icon-Walkie.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                        <JFXButton alignment="BASELINE_LEFT" onMouseClicked="#switchToComputer" prefHeight="38.0" prefWidth="200.0" styleClass="control-button1" text="คอมพิวเตอร์">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../asset/icons/icon-com.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                        <JFXButton alignment="BASELINE_LEFT" onMouseClicked="#switchToOffice" prefHeight="38.0" prefWidth="200.0" styleClass="control-button" text="สำนักงาน">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../asset/icons/icon-office.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                        <JFXButton alignment="BASELINE_LEFT" onMouseClicked="#switchToPromote" prefHeight="38.0" prefWidth="200.0" styleClass="control-button1" text="โฆษณาและเผยแพร่">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../asset/icons/icon-promote.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                        <JFXButton alignment="BASELINE_LEFT" onMouseClicked="#switchToBuild" prefHeight="38.0" prefWidth="200.0" styleClass="control-button" text="ก่อสร้าง">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../asset/icons/icon-hammer.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                        <JFXButton alignment="BASELINE_LEFT" onMouseClicked="#switchToAll" prefHeight="38.0" prefWidth="200.0" styleClass="control-button1" text="ครุภัณฑ์ทั้งหมด">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../asset/icons/icon-Catalog.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                        <Pane prefHeight="239.0" prefWidth="170.0" />
+                        <JFXButton fx:id="backButton" alignment="BASELINE_LEFT" onAction="#switchToBack" onMouseClicked="#switchToAll" prefHeight="38.0" prefWidth="200.0" styleClass="control-button" text="ย้อนกลับ">
+                           <font>
+                              <Font size="12.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../asset/icons/icon-go-back.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </left>
+         <center>
+            <HBox styleClass="background2">
+               <children>
+                  <VBox fx:id="productPane" HBox.hgrow="ALWAYS">
+                     <children>
+                        <ScrollPane fx:id="mainScrollPane" fitToHeight="true" fitToWidth="true" minHeight="200.0" minWidth="200.0" styleClass="background2" VBox.vgrow="ALWAYS">
+                           <content>
+                              <GridPane fx:id="productContainer" styleClass="background3">
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                              </GridPane>
+                           </content>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </ScrollPane>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </center>
+      </BorderPane>
+      <Pane fx:id="noProductPane" prefHeight="17.0" prefWidth="55.0" AnchorPane.bottomAnchor="223.0" AnchorPane.leftAnchor="470.0" AnchorPane.rightAnchor="275.0" AnchorPane.topAnchor="360.0">
+         <children>
+            <Label fx:id="noProductLabel" opacity="0.45" prefHeight="17.0" prefWidth="86.0" styleClass="sub-text" text="ไม่พบสินค้า" />
+         </children>
+      </Pane>
+
+   </children>
+</AnchorPane>

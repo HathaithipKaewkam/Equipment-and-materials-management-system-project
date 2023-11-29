@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="900.0" styleClass="background3" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ku.project.controllers.RequisitionMaterialController">
+   <children>
+      <Pane layoutX="-3.0" prefHeight="92.0" prefWidth="908.0" styleClass="backgroundNavbar" />
+      <AnchorPane layoutX="23.0" layoutY="120.0" prefHeight="410.0" prefWidth="366.0">
+         <styleClass>
+            <String fx:value="background2" />
+            <String fx:value="shadow" />
+         </styleClass>
+         <children>
+            <Label layoutX="37.0" layoutY="68.0" text="ชื่อ:">
+               <font>
+                  <Font name="Century Gothic" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="38.0" layoutY="105.0" text="หมวดหมู่:">
+               <font>
+                  <Font name="Century Gothic" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="37.0" layoutY="144.0" text="จำนวนเหลือ:">
+               <font>
+                  <Font name="Century Gothic" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="121.0" layoutY="14.0" prefHeight="35.0" prefWidth="88.0" text="เบิกวัสดุ">
+               <font>
+                  <Font name="System Bold Italic" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="41.0" layoutY="266.0" text="จำนวน:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="nameLabel" layoutX="165.0" layoutY="66.0" text="nameLabel">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="categoryLabel" layoutX="168.0" layoutY="103.0" text="categoryLabel">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="totalLabel" layoutX="172.0" layoutY="142.0" text="amountLabel">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Button layoutX="137.0" layoutY="325.0" mnemonicParsing="false" onAction="#addAmountButton" prefHeight="35.0" prefWidth="76.0" styleClass="control-button" text="เบิก" textFill="WHITE">
+               <font>
+                  <Font name="Century Gothic" size="13.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../asset/icons/icon-requisition.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Label layoutX="37.0" layoutY="176.0" prefHeight="23.0" prefWidth="129.0" text="คุณลักษณะอื่น ๆ:">
+               <font>
+                  <Font name="Century Gothic" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="propertyLabel" layoutX="175.0" layoutY="174.0" text="propertyLabel">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="39.0" layoutY="216.0" text="ชื่อผู้เบิก:">
+               <font>
+                  <Font name="Century Gothic" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="nameUser" layoutX="172.0" layoutY="215.0" prefHeight="25.0" prefWidth="129.0" />
+            <Spinner fx:id="requisitionAmount" layoutX="168.0" layoutY="267.0" />
+         </children>
+         <!--         <stylesheets>-->
+         <!--            <URL value="@../styles/style.css" />-->
+         <!--            <URL value="@../styles/darkMode.css" />-->
+         <!--         </stylesheets>-->
+      </AnchorPane>
+      <Separator layoutX="389.0" layoutY="126.0" orientation="VERTICAL" prefHeight="416.0" prefWidth="38.0" />
+      <Label layoutX="450.0" layoutY="102.0" styleClass="control-button1" text="ประวัติการเพิ่ม">
+         <font>
+            <Font name="Century Gothic Bold" size="14.0" />
+         </font>
+      </Label>
+      <TableView fx:id="historyAddTable" layoutX="431.0" layoutY="134.0" prefHeight="200.0" prefWidth="450.0" styleClass="background2">
+         <columns>
+            <TableColumn prefWidth="84.0" text="เพิ่มโดย" />
+            <TableColumn prefWidth="82.0" text="วัสดุ" />
+            <TableColumn prefWidth="76.0" text="หมวดหมู่" />
+            <TableColumn prefWidth="73.5999755859375" text="จำนวนเพิ่ม" />
+            <TableColumn prefWidth="80.0001220703125" text="วันและเวลา" />
+            <TableColumn minWidth="0.0" prefWidth="66.39990234375" />
+         </columns>
+      </TableView>
+      <Label layoutX="441.0" layoutY="354.0" styleClass="control-button1" text="ประวัติการเบิก ">
+         <font>
+            <Font name="Century Gothic Bold" size="14.0" />
+         </font>
+      </Label>
+      <TableView fx:id="historyRequisitionTable" layoutX="431.0" layoutY="379.0" prefHeight="200.0" prefWidth="450.0" styleClass="background2">
+         <columns>
+            <TableColumn prefWidth="84.0" text="เพิ่มโดย" />
+            <TableColumn prefWidth="82.0" text="วัสดุ" />
+            <TableColumn prefWidth="76.0" text="หมวดหมู่" />
+            <TableColumn prefWidth="74.4000244140625" text="จำนวนเบิก" />
+            <TableColumn prefWidth="75.199951171875" text="วันและเวลา" />
+            <TableColumn minWidth="0.0" prefWidth="68.0001220703125" />
+         </columns>
+      </TableView>
+      <Button layoutX="14.0" layoutY="560.0" mnemonicParsing="false" onAction="#backButton" styleClass="menu-button1" text="กลับ">
+         <font>
+            <Font name="Century Gothic Bold Italic" size="13.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asset/icons/icon-go-back.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <ImageView fitHeight="56.0" fitWidth="130.0" layoutX="38.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/UntitledTeam.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

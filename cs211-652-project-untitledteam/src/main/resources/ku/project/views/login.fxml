@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ku.project.controllers.LoginController">
+   <left>
+      <AnchorPane prefHeight="600.0" prefWidth="454.0" styleClass="background1" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane layoutX="48.0" layoutY="178.0" prefHeight="226.0" prefWidth="358.0">
+               <children>
+                  <ImageView fitHeight="196.0" fitWidth="351.0" layoutX="4.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/UntitledTeam.png" />
+                     </image>
+                  </ImageView>
+                  <JFXButton fx:id="howApp" layoutX="94.0" layoutY="230.0" onAction="#buttonHowApp" styleClass="control-button" text="How to use app?" textFill="#fffefe">
+                     <font>
+                        <Font name="Century Gothic Bold" size="18.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </AnchorPane>
+            <ComboBox fx:id="themeComboBox" layoutX="28.0" layoutY="27.0" onAction="#selectThemeComboBox" prefHeight="25.0" prefWidth="128.0" promptText="Change Theme" styleClass="backgroundNavbar" />
+            <JFXButton layoutX="9.0" layoutY="551.0" onAction="#creditButton" styleClass="control-button" text="Credit" textFill="#fffafa">
+               <font>
+                  <Font name="Century Gothic Bold" size="14.0" />
+               </font>
+            </JFXButton>
+         </children></AnchorPane>
+   </left>
+   <right>
+      <AnchorPane prefHeight="600.0" prefWidth="466.0" styleClass="background3" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="wrongLogin" layoutX="234.0" layoutY="365.0" textFill="RED">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+            </Label>
+            <AnchorPane layoutX="86.0" layoutY="161.0" prefHeight="303.0" prefWidth="274.0">
+               <children>
+                  <PasswordField fx:id="passwordLogin" layoutX="67.0" layoutY="169.0" promptText="Password" />
+                  <TextField fx:id="userLogin" layoutX="67.0" layoutY="125.0" promptText="Username" />
+                  <Button layoutX="67.0" layoutY="212.0" mnemonicParsing="false" onAction="#loginButton" prefHeight="20.0" prefWidth="149.0" styleClass="control-button" text="Login" textFill="#bc0774">
+                     <font>
+                        <Font name="Century Gothic Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="109.0" layoutY="88.0" text="Log in">
+                     <font>
+                        <Font name="Century Gothic Bold" size="21.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="36.0" layoutY="170.0" pickOnBounds="true" preserveRatio="true" styleClass="control-button">
+                     <image>
+                        <Image url="@../asset/icons/icon-password.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="36.0" layoutY="126.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../asset/icons/icon-user.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="userProfile" fitHeight="79.0" fitWidth="84.0" layoutX="96.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/newstaff.png" />
+                     </image>
+                  </ImageView>
+                  <Button layoutX="68.0" layoutY="253.0" mnemonicParsing="false" onAction="#registerButton" prefHeight="29.0" prefWidth="148.0" styleClass="control-button" text="Register" textFill="#bc0774">
+                     <font>
+                        <Font name="Century Gothic Bold" size="12.0" />
+                     </font>
+                  </Button>
+               </children>
+               <styleClass>
+                  <String fx:value="background2" />
+                  <String fx:value="shadow" />
+               </styleClass>
+            </AnchorPane>
+            <Button layoutX="247.0" layoutY="481.0" mnemonicParsing="false" onAction="#passwordForgotButton" prefHeight="25.0" prefWidth="113.0" styleClass="control-button" text="Forget Password">
+               <font>
+                  <Font name="Century Gothic Bold" size="10.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </right>
+</BorderPane>

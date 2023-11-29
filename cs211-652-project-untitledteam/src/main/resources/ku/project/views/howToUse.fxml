@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="900.0" styleClass="background1" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ku.project.controllers.HowtouseController">
+   <children>
+      <Pane prefHeight="90.0" prefWidth="900.0" styleClass="backgroundNavbar">
+         <children>
+            <Label layoutX="74.0" layoutY="32.0" styleClass="control-button" text="วิธีการใช้งาน">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Button layoutX="824.0" layoutY="45.0" mnemonicParsing="false" onAction="#backtologinButton" styleClass="menu-button1" text="กลับ">
+               <graphic>
+                  <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true" styleClass="control-button">
+                     <image>
+                        <Image url="@../asset/icons/icon-go-back.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </Pane>
+      <TextArea layoutX="31.0" layoutY="134.0" prefHeight="396.0" prefWidth="839.0" text="User&#10;1. การลงทะเบียนต้องกรอกข้อมูลให้ครบทั้ง ชื่อ,ชื่อผู้ใช้งาน ,รหัสผ่าน ,และยืนยันรหัสผ่าน  &#10;    แล้วมีให้ใส่รูปภาพโปรไฟล์ได้(ผู้ใช้สามารถไม่ใส่รูปได้ ระบบจะใส่รูปภาพเป็น default แทนก่อน )&#10;2. ชื่อผู้ใช้งานที่ใช้ลงทะเบียนไม่สามารถซ้ำกันได้ ต้องเป็นภาษาอังกฤษที่มีตัวอักษรมากกว่า 7 และต้องไม่เกิน 10 ตัวอักษร &#10;   รหัสผ่านต้องเป็นภาษาอังกฤษที่มากกว่า 6 และต้องไม่เกิน 20 ตัวอักษร&#10;3. ผู้ใช้ระบบและผู้ดูแลระบบสามารถเปลี่ยน หัสผ่านของตนเองได้โดยระบุ ชื่อผู้ใช้งาน และ รหัสผ่าน เดิมให้ถูกต้อง &#10;   จึงจะสามารถเปลี่ยนรหัสผ่านได้&#10;4.เมื่อเข้าสู่ระบบแล้วจะเจอหน้าของครุภัณฑ์ทั้งหมดที่ว่างให้ยืมได้ โดยก่อนยืมต้องระบุสถานที่เก็บก่อนถึงจะยืมได้ &#10;   ถ้ากดยืมไปแล้วระบบจะทำการส่งข้อมูลไปให้เจ้าหน้าที่  เพื่อให้เจ้าหน้าที่กดอนุมัติขอยืม &#10;   ในแถบทางด้านซ้ายจะแบ่งเป็นหมวดหมู่ต่างๆ ด้านบนจะเป็นปุ่มไปหน้าโปร์ไฟล์กับออกจากระบบ&#10;5.เมื่อกดปุ่มโปร์ไฟล์จะมีปุ่มที่สามารถเปลี่ยนรูปภาพของตัวเองได้ มีปุ่มเปลี่ยนรหัสผ่าน &#10;   มีส่วนแสดงข้อมูลเวลาประวัติการเบิกวัสดุซึ่งเจ้าหน้าที่จะเป็นคนกรอกข้อมูลวัสดุที่ผู้ใช้เบิกไป &#10;   มีส่วนแสดงข้อมูลเวลาประวัติการยืมครุภัณฑ์ และแสดงสถานะการยืมครุภัณฑ์ โดยผู้ใช้งานจะเห็นสถานะการรออนุมัติ&#10;   จากเจ้าหน้าที่ ซึ่งผู้ใช้งานสามารถคืนครุภัณฑ์ในหน้านี้ได้และต้องรออนุมัติจากเจ้าหน้าที่ก่อนถึงเป็นการเสร็จสิ้นการยืมคืน ">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextArea>
+   </children>
+</AnchorPane>
